@@ -1,0 +1,30 @@
+{
+  "name": "microservices-cicd-demo",
+  "version": "1.0.0",
+  "description": "Cloud-Native CI/CD Pipeline for Microservices",
+  "type": "module",
+  "scripts": {
+    "start": "node services/gateway/server.js",
+    "test": "vitest",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "dev:gateway": "node services/gateway/server.js",
+    "dev:users": "node services/users/server.js",
+    "dev:products": "node services/products/server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "winston": "^3.11.0",
+    "express-winston": "^4.2.0",
+    "joi": "^17.11.0",
+    "http-proxy-middleware": "^2.0.6"
+  },
+  "devDependencies": {
+    "vitest": "^0.34.6",
+    "eslint": "^8.54.0",
+    "prettier": "^3.1.0",
+    "supertest": "^6.3.3"
+  }
+}
